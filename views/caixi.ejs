@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/stylesheets/button.css">
+    <link rel="stylesheet" type="text/css" ref="/stylesheets/" >
+<style type="text/css">
+    body
+    {
+
+        margin: 0;
+        background-image: url("/images/caixi.png") ;
+        background-position:50% 50%;
+        background-size:100%;
+    }
+    #caixiname
+    {
+        text-align:center;
+    }
+    .table
+    {
+        position:absolute;
+        left:8%;
+        margin:0 auto;
+        width:1300px;
+    }
+    img
+    {
+        width: 300px;
+        height: 200px;
+    }
+    .tr
+    {   height:270px;
+        width:100%;
+    }
+    .td
+    {
+        margin-left: 70px;
+        display:inline-table;
+        width:300px;
+        height:300px;
+    }
+    h1
+    {
+        top: 20px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+        text-transform: uppercase;
+        text-align: center;
+        color: #666;
+        margin: 0 0 30px 0;
+        letter-spacing: 4px;
+        font-family: impact;
+        font-size:32px;
+        font-weight: 100;
+        position: relative;
+    }
+</style>
+
+</head>
+<body>
+<div>
+    <a href="/map" class="button button-glow button-border button-rounded button-primary">返回</a>
+</div>
+<div id="caixiname">
+    <h1><%= results[0].caixiName %></h1>
+    <div id="introduction">
+        <p><%= results[0].caixiMassage %></p>
+    </div>
+</div>
+<div class="table">
+    <div class="tr">
+        <% for(var i=0; i<results.length;i++){%>
+        <div class="td">
+            <div><img src="/images/<%= results[i].photoName%>.jpg" /></div>
+            <div>
+            <a href=" " title="菜名"><%= results[i].dishName %></a>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</div>
+
+</body>
+</html>
+

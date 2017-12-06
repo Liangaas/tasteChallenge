@@ -1,0 +1,111 @@
+/* TaTouWang URL: www.datouwang.com */
+body {
+  background-color: #f7f4e4;
+}
+figure {
+  width: 50%;
+  margin: 8vh auto 0 auto;
+  max-width: 80vh;
+}
+figure #sea {
+  fill: #2e1deb;
+}
+figure #hi {
+  fill: rgba(77, 241, 24, 0.2);
+}
+figure #light {
+  fill: #5d6aff;
+}
+figure #shad {
+  fill: rgba(0, 0, 0, 0.05);
+}
+figure #land {
+  fill: #32CD32;
+  -webkit-animation: spin 10s linear infinite forwards;
+          animation: spin 10s linear infinite forwards;
+}
+figure .vehicles use {
+  fill: #f0fbfc;
+  -webkit-animation: orbit 15s linear infinite;
+          animation: orbit 15s linear infinite;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+figure #boat1 {
+  -webkit-transform: translateX(40px) translateY(-80px);
+          transform: translateX(40px) translateY(-80px);
+}
+figure #boat1 use {
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+}
+figure #plane1 {
+  -webkit-transform: translateX(-10px) translateY(170px);
+          transform: translateX(-10px) translateY(170px);
+}
+figure #plane2 {
+  -webkit-transform: translateX(170px) translateY(150px);
+          transform: translateX(170px) translateY(150px);
+}
+figure #plane2 use {
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
+figure #plane3 {
+  -webkit-transform: translateX(140px) translateY(-50px);
+          transform: translateX(140px) translateY(-50px);
+}
+figure #plane3 use {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+}
+figure #bike1 {
+  -webkit-transform: translateX(50px) translateY(190px);
+          transform: translateX(50px) translateY(190px);
+}
+figure #bike1 use {
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+}
+@-webkit-keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg) translateX(-160px);
+            transform: rotate(0deg) translateX(-160px);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(-160px);
+            transform: rotate(360deg) translateX(-160px);
+  }
+}
+@keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg) translateX(-160px);
+            transform: rotate(0deg) translateX(-160px);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(-160px);
+            transform: rotate(360deg) translateX(-160px);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}

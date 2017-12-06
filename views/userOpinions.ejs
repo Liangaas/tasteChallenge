@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+<link rel="stylesheet" href="/stylesheets/button.css">
+<head>
+    <meta  charset="utf-8">
+    <title>味蕾挑战</title>
+    <style>
+        body
+        {
+
+            margin: 0;
+            background-image: url("/images/bg.jpg") ;
+            background-repeat: no-repeat ;
+
+            background-size:100%;
+        }
+
+        ul
+        {
+            padding-left: 0;
+            overflow: hidden;
+        }
+
+        ul li
+        {
+            float: left;
+            list-style: none;
+            width: 27px;
+            height: 27px;
+            background: url(images/star.gif)
+        }
+        ul li a
+        {
+            display: block;
+            width: 100%;
+            padding-top: 27px;
+            overflow: hidden;
+        }
+
+        ul li.light
+        {
+            background-position: 0 -29px;
+        }
+        .botton{
+            background-color: #ffb94b;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
+            background-image: -webkit-linear-gradient(top, #fddb6f, #ffb94b);
+            background-image: -moz-linear-gradient(top, #fddb6f, #ffb94b);
+            background-image: -ms-linear-gradient(top, #fddb6f, #ffb94b);
+            background-image: -o-linear-gradient(top, #fddb6f, #ffb94b);
+            background-image: linear-gradient(top, #fddb6f, #ffb94b);
+
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+
+            text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+
+            -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+            -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+
+            border-width: 1px;
+            border-style: solid;
+            border-color: #d69e31 #e3a037 #d5982d #e3a037;
+
+            float: left;
+            height: 35px;
+            padding: 0;
+            width: 80px;
+            cursor: pointer;
+            font: bold 15px Arial, Helvetica;
+            color: #8f5a0a;
+            margin-left: 20px;
+        }
+        form{
+            background-color: #fff;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+            background-image: -webkit-linear-gradient(top, #fff, #eee);
+            background-image: -moz-linear-gradient(top, #fff, #eee);
+            background-image: -ms-linear-gradient(top, #fff, #eee);
+            background-image: -o-linear-gradient(top, #fff, #eee);
+            background-image: linear-gradient(top, #fff, #eee);
+            height: 240px;
+            width: 400px;
+            margin: -150px 0 0 -230px;
+            padding: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 0;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            -webkit-box-shadow:
+                    0 0 2px rgba(0, 0, 0, 0.2),
+                    0 1px 1px rgba(0, 0, 0, .2),
+                    0 3px 0 #fff,
+                    0 4px 0 rgba(0, 0, 0, .2),
+                    0 6px 0 #fff,
+                    0 7px 0 rgba(0, 0, 0, .2);
+            -moz-box-shadow:
+                    0 0 2px rgba(0, 0, 0, 0.2),
+                    1px 1px   0 rgba(0,   0,   0,   .1),
+                    3px 3px   0 rgba(255, 255, 255, 1),
+                    4px 4px   0 rgba(0,   0,   0,   .1),
+                    6px 6px   0 rgba(255, 255, 255, 1),
+                    7px 7px   0 rgba(0,   0,   0,   .1);
+            box-shadow:
+                    0 0 2px rgba(0, 0, 0, 0.2),
+                    0 1px 1px rgba(0, 0, 0, .2),
+                    0 3px 0 #fff,
+                    0 4px 0 rgba(0, 0, 0, .2),
+                    0 6px 0 #fff,
+                    0 7px 0 rgba(0, 0, 0, .2);
+        }
+        form:before
+        {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            border: 1px dashed #ccc;
+            top: 5px;
+            bottom: 5px;
+            left: 5px;
+            right: 5px;
+            -moz-box-shadow: 0 0 0 1px #fff;
+            -webkit-box-shadow: 0 0 0 1px #fff;
+            box-shadow: 0 0 0 1px #fff;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <a href="/" class="button button-glow button-rounded button-highlight">返回</a>
+</div>
+<form name="form" method="post" action=""
+       onSubmit="return validate_form()">
+                <div align="center" >
+                    <table border="0" width="69%"  cellspacing="0" cellpadding="5">
+                        <tr>
+                            <td width="21%">评分:</td>
+                            <td width="79%">
+                                <ul>
+                                      <li class="light"><a href="javascript:;">1</a></li>
+                                      <li><a href="javascript:;">2</a></li>
+                                      <li><a href="javascript:;">3</a></li>
+                                      <li><a href="javascript:;">4</a></li>
+                                      <li><a href="javascript:;">5</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="21%" >意见:</td>
+                            <td width="79%">
+                                <div id="demo"></div>
+                                <textarea name="DESCRIPTION" rows=8 cols=45 wrap=virtual></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="21%" align="right">　</td>
+                            <td width="79%" align="right">
+                                <input class="botton" type="submit" name="submit" value="提交" onclick="submitBtnClicked()">
+                                <input class="botton" type="reset" value="重置" name="reset">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</form>
+<script type="text/JavaScript">
+    
+    var finalnum = tempnum= 0;
+    var lis = document.getElementsByTagName("li");
+    //num:传入点亮星星的个数
+    //finalnum:最终点亮星星的个数
+    //tempnum:一个中间值
+    function fnShow(num) {
+        finalnum= num || tempnum;//如果传入的num为0，则finalnum取tempnum的值
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].className = i < finalnum? "light" : "";//点亮星星就是加class为light的样式
+        }
+    }
+    for (var i = 1; i <= lis.length; i++)
+    {
+        lis[i - 1].index = i;
+        lis[i - 1].onmouseover = function()
+        {
+            fnShow(this.index);
+        }
+        lis[i - 1].onmouseout = function()
+        {
+            fnShow(0);
+        }
+        lis[i - 1].onclick = function() {
+            tempnum= this.index;
+        }
+    }
+    function validate_form() {
+        validity = true;
+        if (!check_empty(document.form.DESCRIPTION.value))
+        { validity = false; alert('对不起!请填入您的意见。'); }
+        if (validity)
+            alert ("                      谢谢您的意见.                                  ");
+        return validity;
+    }
+    function check_empty(text) {
+        return (text.length > 0);
+    }
+    function submitBtnClicked(){
+    	console.log(finalnum);
+    	var starnum = document.createElement("input");
+            starnum.type="hidden";
+            starnum.name="starnum";
+            starnum.id="starnum";
+            
+            starnum.value=finalnum;
+
+var temp = document.getElementById("demo");
+	temp.appendChild(starnum);
+    	
+    }
+</script>
+
+</body>

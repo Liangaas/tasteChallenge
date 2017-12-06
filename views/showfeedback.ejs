@@ -1,0 +1,105 @@
+
+<head>
+
+ <meta charset="UTF-8" />
+ <link rel="stylesheet" href="/stylesheets/button.css">
+<style>
+ body
+ {
+
+  margin: 0;
+  background-image: url("/images/bg.jpg") ;
+  background-repeat: no-repeat ;
+  background-position:50% 50%;
+  background-size:100%;
+ }
+ form{
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+  background-image: -webkit-linear-gradient(top, #fff, #eee);
+  background-image: -moz-linear-gradient(top, #fff, #eee);
+  background-image: -ms-linear-gradient(top, #fff, #eee);
+  background-image: -o-linear-gradient(top, #fff, #eee);
+  background-image: linear-gradient(top, #fff, #eee);
+  height: 270px;
+  width: 400px;
+  margin: -150px 0 0 -230px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),
+          0 1px 1px rgba(0, 0, 0, .2),
+          0 3px 0 #fff,
+          0 4px 0 rgba(0, 0, 0, .2),
+          0 6px 0 #fff,
+          0 7px 0 rgba(0, 0, 0, .2);
+  -moz-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),
+          1px 1px   0 rgba(0,   0,   0,   .1),
+          3px 3px   0 rgba(255, 255, 255, 1),
+          4px 4px   0 rgba(0,   0,   0,   .1),
+          6px 6px   0 rgba(255, 255, 255, 1),
+          7px 7px   0 rgba(0,   0,   0,   .1);
+  box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),
+          0 1px 1px rgba(0, 0, 0, .2),
+          0 3px 0 #fff,
+          0 4px 0 rgba(0, 0, 0, .2),
+          0 6px 0 #fff,
+          0 7px 0 rgba(0, 0, 0, .2);
+ }
+ form:before
+ {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border: 1px dashed #ccc;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  -moz-box-shadow: 0 0 0 1px #fff;
+  -webkit-box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #fff;
+ }
+ feedback
+ {
+  margin-top: 10px;
+  margin-bottom:20px;
+ }
+ h2
+ {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+  text-transform: uppercase;
+  text-align: center;
+  color: #666;
+  margin: 0 0 30px 0;
+  letter-spacing: 4px;
+  font-family: impact;
+  font-size:32px;
+  font-weight: 100;
+  position: relative;
+ }
+</style>
+</head>
+<body>
+<div>
+ <a href="/map" class="button button-glow button-rounded button-highlight">返回</a>
+</div>
+<form name="form" >
+ <h2 id="comments-title" align="center">这是给您的回复</h2>
+    <% for(var i=0; i<results.length;i++){%>
+ <div class="feedback" align="center" style="border-bottom:1px solid #CCCCCC;" >
+     <%=results[i].feedback%><br><hr>
+ </div>
+    <%}%>
+</form>
+
+</body>
+<%- include footer %>
